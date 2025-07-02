@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GYM XTREME</title>
+  <link rel="icon" href="img/gym.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+  font-family: Arial, sans-serif;
+}
+
+
+    
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #000;
+      padding: 10px 30px;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .center-links, .right-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .logo img {
+      height: 120px;
+      margin-right: 15px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+z     50% { transform: translateY(-5px); }
+    }
+
+    .navbar .logo h1 {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .navbar a:hover {
+      color: #ffffff;
+      transition: color 0.3s;
+    }
+
+    .planes-promocion {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 1100px;
+      margin: 40px auto;
+      gap: 50px;
+    }
+
+    .plan {
+      width: 300px;
+      height: 380px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 0.8s ease;
+      transform-style: preserve-3d;
+    }
+
+    .plan:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      backface-visibility: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      background-color: #f8f8f8;
+    }
+
+    .card-front img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .card-front h3, .card-back h3 {
+      color: #d61414;
+      margin-bottom: 15px;
+    }
+
+    .card-front p, .card-back p {
+      color: #555;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .footer {
+      background-color: #111;
+      color: #fff;
+      padding: 40px 20px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+    }
+
+    .footer-section h3, .footer-section h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #ccc;
+    }
+
+    .footer-section ul li a:hover {
+      color: #fff;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      filter: brightness(0) invert(1);
+      width: 25px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      font-size: 14px;
+      color: #aaaaaa;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .center-links,
+      .right-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .planes-promocion {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/gym.png" alt="Logo Gimnasio" />
+      <h1>GYM XTREME</h1>
+    </div>
+    <div class="center-links">
+      <a href="index.html">Inicio</a>
+      <a href="#">Planes y servicios</a>
+      <a href="#sobre-nosotros">Sobre nosotros</a>
+    </div>
+    <div class="right-links">
+      <a href="login.html">Iniciar Sesión</a>
+      <a href="error500/error500.php">Registrarse</a>
+    </div>
+  </header>
+
+  <section class="planes-promocion" id="sobre-nosotros">
+    <div class="plan">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://img.icons8.com/color/96/conference-call--v1.png" alt="Quiénes Somos" />
+          <h3>¿QUIÉNES SOMOS?</h3>
+        </div>
+        <div class="card-back">
+          <h3>GYMXTREME</h3>
+          <p>Es una comunidad apasionada por el fitness y la superación personal. Brindamos un espacio de motivación, apoyo y transformación</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://img.icons8.com/fluency/96/dumbbell.png" alt="Sobre Nosotros" />
+          <h3>SOBRE NOSOTROS</h3>
+        </div>
+        <div class="card-back">
+          <h3>GYMXTREME</h3>
+          <p>Somos un gimnasio comprometido con la salud, el bienestar y el rendimiento de nuestros clientes, nuestro objetivo es ayudarte a alcanzar tu mejor versión</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>GYM X-TREME</h3>
+        <p>TRANSFORMA TU CUERPO, TRANSFORMA TU VIDA.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>UBICACIÓN</h4>
+        <p>¿Dónde estamos? Haz clic y descubre</p>
+        <ul>
+          <li>
+            <a href="https://maps.app.goo.gl/JtsiiEwzP99ovUGu8">
+              <img width="30" height="30" src="https://img.icons8.com/officel/30/map-marker.png" alt="Ubicación" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h4>CONTÁCTANOS</h4>
+        <p>📞 +57 3123590382</p>
+        <p>📧 info@gymxtreme.com</p>
+        <p>📱 SÍGUENOS</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/gymxtreme3010/">
+            <img src="https://img.icons8.com/ios/25/facebook-new.png" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/gymx_treme/?igsh=bHJrcWFiaDIzYmJr#">
+            <img src="https://img.icons8.com/ios/25/instagram-new.png" alt="Instagram" />
+          </a>
+          <a href="https://api.whatsapp.com/send/?phone=573123590382&text&type=phone_number&app_absent=0">
+            <img src="https://img.icons8.com/ios/25/whatsapp.png" alt="WhatsApp">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 GYM XTREME. Todos los derechos reservados.
+    </div>
+  </footer>
+</body>
+</html>

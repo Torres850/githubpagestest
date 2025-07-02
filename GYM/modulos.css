@@ -1,0 +1,180 @@
+body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    
+    
+.barra-lateral {
+
+      position: fixed;
+
+      top: 0;
+
+      right: 0;
+
+      width: 400px;
+
+      height: 100vh;
+
+      background-color: #000000;
+
+      border-left: 2px solid #423e3e;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      padding-top: 30px;
+
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+
+
+   .logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000;
+  margin-bottom: 40px;
+  background-color: white;
+}
+
+
+    .nav-button {
+      width: 140px;
+      padding: 12px 0;
+      margin: 10px 0;
+      background-color: #ffffff;
+      color: black;
+      border: none;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .nav-button:hover {
+      background-color: #ff0202;
+      color: #ffffff;
+    }
+
+    #gym{
+margin-left: 200px;
+opacity: 80%;
+
+        
+    }
+
+    .titulos{
+        margin-left: 370px; 
+        color: #0a0a0a;
+        font-size: 40px;
+         
+      background: linear-gradient(90deg, #0a0102,#fc0909); /* Rosa a violeta */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      font-family: 'Quicksand', sans-serif;
+    }
+    .tItulo_dos{
+
+    margin-left: 330px ;   
+    font-size: 20px;
+    } 
+    
+    hr{
+      color: black;
+    }
+
+    /* Pantallas pequeñas  */
+@media (max-width: 576px) {
+  .barra-lateral {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .nav-button {
+    margin: 5px;
+    width: 45%;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  #gym {
+    margin-left: 0;
+    width: 100%;
+    display: block;
+  }
+
+  .titulos {
+    margin-left: 0;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .tItulo_dos {
+    margin-left: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+/* Pantallas medianas */
+@media (min-width: 577px) and (max-width: 1199px) {
+  .barra-lateral {
+    width: 250px;
+  }
+
+  .titulos {
+    margin-left: 270px;
+    font-size: 36px;
+  }
+
+  .tItulo_dos {
+    margin-left: 250px;
+    font-size: 18px;
+  }
+
+  #gym {
+    margin-left: 150px;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .barra-lateral {
+    width: 400px;
+  }
+
+  .titulos {
+    margin-left: 370px;
+    font-size: 40px;
+  }
+
+  .tItulo_dos {
+    margin-left: 330px;
+    font-size: 20px;
+  }
+
+  #gym {
+    margin-left: 200px;
+  }
+}

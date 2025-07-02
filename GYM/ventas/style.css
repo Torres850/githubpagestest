@@ -1,0 +1,302 @@
+.barra-lateral {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 100vh;
+      background-color: #000000;
+      border-left: 2px solid #423e3e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+   .logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000;
+  margin-bottom: 40px;
+  background-color: white;
+}
+
+
+    .nav-button {
+      width: 140px;
+      padding: 12px 0;
+      margin: 10px 0;
+      background-color: #ffffff;
+      color: black;
+      border: none;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .nav-button:hover {
+      background-color: #ff0202;
+      color: #ffffff;
+    }
+
+    #gym{
+margin-left: 200px;
+opacity: 80%;
+
+        
+    }
+
+    .titulos{
+        margin-left: 370px; 
+        color: #0a0a0a;
+        font-size: 40px;
+         
+      background: linear-gradient(90deg, #0a0102,#fc0909); /* Rosa a violeta */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      font-family: 'Quicksand', sans-serif;
+    }
+    .tItulo_dos{
+
+    margin-left: 330px ;   
+    font-size: 20px;
+    } 
+    
+    /* botones de registrar modificar eliminar */
+
+    ul{
+        list-style: none;
+        padding: 30px 0px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-left: 300px;
+
+
+    }
+
+    ul li a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        background-color: black;
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    ul li a:hover{
+background-color: red;
+color: #000;
+    }
+
+     table{
+      float: left;
+     }
+
+
+#tabla{
+  float: left;
+   max-width: 960px; /* puedes ajustar este valor */
+  width: 100%;
+  table-layout: fixed;
+}
+
+.boton_registrar{
+background-color: #000;
+color: white;
+
+border: none;
+
+}
+
+.boton_registrar:hover{
+
+background-color: rgb(17, 141, 79);
+color: white;
+border: none;
+}
+
+
+
+.modal-header{
+  background-color: #fc0909;
+  color: white;
+}
+.boder-rojo{
+  border:2px solid red;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5); /* efecto de brillo */
+    border-radius: 6px;
+    color: #000;
+}
+
+/* tabla */
+.tabla-info th{
+  background-color: #000;
+  color: white;
+}
+.tabla-info th:hover{
+  background-color: red;
+  color: white;
+
+}
+
+/*boton eliminar*/
+.boton-eliminar{
+  background-color: #000;
+color: white;
+
+}
+.boton-eliminar:hover{
+  
+  background-color: rgb(185, 19, 19);
+color: white;
+border: none;
+}
+
+.bton-segundario{
+  background-color: #000;
+  color: white;
+}
+.bton-segundario:hover{
+  background-color: #000;
+  color: white;
+  
+}
+
+.bton-guardar{
+  background-color: #000;
+  color: white;
+}
+
+.bton-guardar:hover{
+  background-color: rgb(255, 217, 0);
+  color: #000;
+}
+
+
+/* 📱 CELULARES (hasta 576px) */
+@media screen and (max-width: 576px) {
+  .barra-lateral {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 10px;
+    border-left: none;
+    border-top: 2px solid #423e3e;
+    box-shadow: none;
+    margin-top: 20px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .nav-button {
+    width: 100%;
+    max-width: 200px;
+    margin: 8px;
+    font-size: 14px;
+  }
+
+  ul {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+    gap: 10px;
+  }
+
+  ul li a {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  #tabla {
+    float: none;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    font-size: 14px;
+  }
+
+  select, input {
+    font-size: 14px;
+  }
+}
+
+/* 📲 TABLETS (577px a 991px) */
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  .barra-lateral {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .nav-button {
+    width: 160px;
+    margin: 10px;
+  }
+
+  ul {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  #tabla {
+    float: none;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* 💻 ESCRITORIOS GRANDES (desde 992px) */
+@media screen and (min-width: 992px) {
+  #tabla {
+    float: left;
+    width: calc(100% - 420px);
+  }
+
+  .barra-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  ul {
+    flex-direction: row;
+    margin-left: 300px;
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clientes</title>
+     <link rel="icon" href="../img/gym.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/0cd06a153a.js" crossorigin="anonymous"></script>   
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="acciones">
+      <center><ul>
+        <li>
+      <a href="" class="" data-bs-toggle="modal" data-bs-target="#formularioModal" >REGiSTRAR</a>
+    </li>
+   
+    <li>
+        <a  href=""data-bs-toggle="modal" data-bs-target="#modalEliminar" >ELIMINAR</a>
+    </li>
+    </ul></center>
+</div>
+
+<!-- Modal con el formulario -->
+<div class="modal fade" id="formularioModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content text-start">
+      <div class="modal-header">
+        <h5 class="modal-title" style="font-family: cursive;">Formulario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+         <input type="text" id="nombre" class="form-control mb-2 boder-rojo" placeholder="nombre">
+        <input type="text" id="apellido" class="form-control mb-2 boder-rojo" placeholder="apellido">
+        <select  id="Tipo_documento" class="form-control mb-2 boder-rojo">
+  <option value="">Tipo de documento</option>
+  <option value="TI">TI</option>
+  <option value="CC">CC</option>
+  <option value="CE">CE</option>
+  <option value="PP">PP</option>
+</select>
+<input type="text" id="Numero_documento" class="form-control mb-2 boder-rojo" placeholder="numero de documento">
+
+     </div>
+<div class="modal-footer">
+        <button type="button" class="btn boton_registrar" onclick="agregarFila()" data-bs-dismiss="modal">
+          Enviar
+        </button>
+      </div>
+    </div> 
+  </div> 
+</div> 
+<div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Eliminar Registro</h5>
+        <button type="button" class="btn boton_eliminar" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="buscarNombre" class="form-control mb-2 boder-rojo" placeholder="Buscar por nombre">
+        <input type="text" id="buscarApellido" class="form-control boder-rojo" placeholder="Buscar por apellido">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn boton-eliminar" onclick="eliminarPorFiltro()">Eliminar</button>
+        <button type="button" class="btn bton-segundario" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalEditar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Editar Registro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="editNombre" class="form-control mb-2  boder-rojo" placeholder="Nombre">
+        <input type="text" id="editApellido" class="form-control mb-2  boder-rojo" placeholder="Apellido">
+        <select id="editTipo_documento" class="form-control mb-2  boder-rojo">
+        <option value="">Tipo de documento</option>
+  <option value="TI">TI</option>
+  <option value="CC">CC</option>
+  <option value="CE">CE</option>
+  <option value="PP">PP</option>
+</select>
+        <input type="text" id="editNumero_documento" class="form-control mb-2  boder-rojo" placeholder="Numero documento">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bton-guardar" onclick="guardarEdicion()">Guardar cambios</button>
+        <button type="button" class="btn bton-segundario" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<center><div id="tabla" class="container mt-5">
+  <table  class="table table-bordered table-striped">
+    <thead class="tabla-info">
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>T.documento</th>
+        <th>N.documento</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="tablaBody">
+      <!-- Se insertan filas aquí -->
+    </tbody>
+  </table>
+</div>
+</center>
+    <div class="barra-lateral">
+  
+<img src="../img/gym.png" alt="Logo" class="logo">
+<a href="../dashboard/darshboard.html" class="nav-button">Dashboard</a>
+  <a href="../inventario/inventario.html" class="nav-button">Inventario</a>
+  <a href="../clientes/clientes.html" class="nav-button">Clientes</a>
+  <a href="../subs/subs.html" class="nav-button">Subscripcion</a>
+  <a href="../ventas/ventas.html" class="nav-button">Ventas</a>
+  <a href="../index.html" class="nav-button">Salir</a>
+</div>
+<script src="clientes.js"></script>
+</body>
+
+
+
+</html>

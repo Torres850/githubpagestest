@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GYM XTREME - Planes y Servicios</title>
+  <link rel="icon" href="img/gym.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #000;
+    }
+
+    header.navbar {
+      background-color: #000;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header.navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header.navbar img {
+      height: 150px;
+      width: auto;
+    }
+
+    header.navbar h1 {
+      font-size: 20px;
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    .center-links a,
+    .right-links a {
+      text-decoration: none;
+      color: white;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+
+    .center-links a:hover,
+    .right-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header.navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .center-links,
+      .right-links {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .center-links a,
+      .right-links a {
+        margin: 5px 0;
+      }
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #eee;
+      flex-wrap: wrap;
+    }
+
+    .feature-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-box h3 {
+      color: #c9a500;
+      margin-top: 10px;
+    }
+
+    .plans {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .plan-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .plan {
+      background-color: white;
+      border: 2px solid red;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .plan h3 {
+      color: red;
+    }
+
+    .plan p {
+      margin: 5px 0;
+    }
+
+    .plan button {
+      background-color: red;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .plan img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    footer div {
+      margin-bottom: 20px;
+      max-width: 250px;
+    }
+
+    footer h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .social-icons span {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/Logo Gimnasio.jpg" alt="Logo Gimnasio" />
+      <h1>GYM XTREME</h1>
+    </div>
+    <div class="center-links">
+      <a href="../index.html">Inicio</a>
+      <a href="Servicios.html">Planes y servicios</a>
+      <a href="../sobrenosotros.html">Sobre nosotros</a>
+    </div>
+    <div class="right-links">
+      <a href="../login.html">Iniciar sesión</a>
+      <a href="../error500/error500.php">Registrarse</a>
+    </div>
+  </header>
+
+  <section class="plans">
+    <h2 style="color: red;">Planes Disponibles</h2>
+    <div class="plan-container">
+      <div class="plan">
+        <img src="img/dumbell-and-fitness-ball-icon-illustration-gym-and-fitness-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg" alt="Plan Común">
+        <h3>Plan Común</h3>
+        <p>$8.000 / Rutina</p>
+        <p>Acceso a máquinas básicas</p>
+        <br />
+        <button onclick="window.location.href='Suscripcionpago.html'">Suscribirme</button>
+      </div>
+      <div class="plan">
+        <img src="img/personaje-mascota-dibujos-animados-vectorial-clasico-hombres-gimnasio-fondo-blanco_911330-2584.avif" alt="Plan Básico">
+        <h3>Plan Básico</h3>
+        <p>$69.900 / Mensual</p>
+        <p>Acceso completo + 2 clases grupales</p>
+        <button onclick="window.location.href='Suscripcionpago.html'">Suscribirme</button>
+      </div>
+      <div class="plan">
+        <img src="img/OIP.webp" alt="Plan Premium">
+        <h3>Plan Premium</h3>
+        <p>$340.000 / Semestral</p>
+        <p>Acceso 24/7 + clases ilimitadas</p>
+        <br />
+        <button onclick="window.location.href='Suscripcionpago.html'">Suscribirme</button>
+      </div>
+      <div class="plan">
+        <img src="img/bodybuilding-emblem-and-gym-logo-design-template-vector.jpg" alt="Plan X-TREME">
+        <h3>Plan X-TREME</h3>
+        <p>$615.000 / Anual</p>
+        <p>Acceso limitado, para 2 personas, 24/7 y clases ilimitadas</p>
+        <button onclick="window.location.href='Suscripcionpago.html'">Suscribirme</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <h3>GYM X-TREME</h3>
+      <p>TRANSFORMA TU CUERPO, TRANSFORMA TU VIDA.</p>
+    </div>
+    <div>
+      <h3>UBICACION</h3>
+      <p>¿DÓNDE estamos? Haz clic y descubre</p>
+    </div>
+    <div>
+      <h3>CONTACTANOS</h3>
+      <p>📞 +57 3123590382</p>
+      <p>📧 info@gymxtreme.com</p>
+      <p>👤 SIGUENOS</p>
+      <div class="social-icons">
+        <span>
+          <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </span>
+        <span>
+          <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </span>
+        <span>
+          <a href="https://wa.me/573123590382" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

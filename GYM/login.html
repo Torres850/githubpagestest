@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - GYM XTREME</title>
+  <link rel="icon" href="img/gym.png" type="image/png">
+  <style>
+    :root {
+      --rojo: #b30000;
+      --negro: #000000;
+      --blanco: #ffffff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--blanco); /* FONDO BLANCO */
+      color: var(--negro);             /* LETRAS NEGRAS */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      color: var(--rojo);
+      margin-bottom: 20px;
+    }
+
+    .form-container {
+      background-color: var(--blanco);
+      color: var(--negro);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border: 2px solid var(--rojo);
+      border-radius: 6px;
+      background-color: #f9f9f9;
+      color: var(--negro);
+    }
+
+    button {
+      background-color: var(--rojo);
+      color: var(--blanco);
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #8b0000;
+    }
+
+    #error {
+      color: var(--rojo);
+      text-align: center;
+      display: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* 📱 CELULARES (hasta 576px) */
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .form-container {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* 📲 TABLETS (577px a 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .form-container {
+    max-width: 85%;
+    padding: 25px;
+  }
+
+  input, button {
+    font-size: 15px;
+    padding: 11px;
+  }
+}
+
+/* 💻 PC O MONITORES GRANDES (desde 992px) */
+@media (min-width: 992px) {
+  .form-container {
+    max-width: 400px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  input, button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <h2>INICIAR SESIÓN GYM XTREME</h2>
+
+  <div class="form-container">
+    <label for="usuario">Correo:</label>
+    <input type="email" id="usuario" placeholder="admin@gymxtreme.com" required>
+
+    <label for="clave">Contraseña:</label>
+    <input type="password" id="clave" placeholder="Contraseña" required>
+
+    <button onclick="validarLogin()">Ingresar</button>
+
+    <p id="error">Correo o contraseña incorrectos.</p>
+  </div>
+
+  <script>
+    function validarLogin() {
+      const usuario = document.getElementById("usuario").value;
+      const clave = document.getElementById("clave").value;
+
+      const adminUsuario = "admin@gymxtreme.com";
+      const adminClave = "admin123";
+      const clienteUsuario="cliente@gmail.com";
+      const clienteClave="cliente123";
+
+      if (usuario === adminUsuario && clave === adminClave) {
+        // Redirige a la página de módulos
+        window.location.href = "modulos.html";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+if (usuario === clienteUsuario && clave === clienteClave) {
+        // Redirige a la página de módulos
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+
+
+    }
+  </script>
+
+</body>
+</html>

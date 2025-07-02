@@ -1,0 +1,4 @@
+ErrorDocument 404 /PROYECTO_GYM2/404.html
+ErrorDocument 500 /PROYECTO_GYM2/error500.php
+Options +FollowSymLinks
+RewriteEngine On
